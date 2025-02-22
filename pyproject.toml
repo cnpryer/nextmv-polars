@@ -5,14 +5,14 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "nextmv",
     "polars>=1.22.0",
 ]
 
 [dependency-groups]
 dev = [
+    "nextmv",
     "pip>=25.0.1",
 ]
 
 [tool.uv.sources]
-nextmv = { path = "../nextmv-py/nextmv" }
+nextmv = { git = "https://github.com/cnpryer/nextmv-py", subdirectory = "nextmv", branch = "cnpryer/manylinux_2_24_aarch64" }
